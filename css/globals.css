@@ -3,8 +3,14 @@
 @tailwind utilities;
 @import "@fontsource/pretendard/index.css";
 
+html {
+  background-color: gray;
+}
 body {
   font-family: 'Pretendard', Arial, Helvetica, sans-serif;
+  width: 375px;
+  height: 812px;
+  margin: auto;
 }
 
 @layer utilities {
