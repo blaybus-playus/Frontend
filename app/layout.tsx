@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
+import Header from "@/components/common/Header";
 
 export const metadata: Metadata = {
   title: "DoStep",
@@ -13,8 +14,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
-        <div className="flex justify-center items-center w-full h-[48px] bg-gray-500"><span>상단 영역</span></div>
+      <body className="pt-[104px]">
+        <Header />
         {children}
       </body>
     </html>
