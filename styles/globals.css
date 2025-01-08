@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+@layer base {
+  * {
+    line-height: 140%;
+    letter-spacing: -0.025rem;
+  }
+
+  html {
+    background-color: gray;
+  }
+
+  body {
+    font-family: 'Pretendard';
+    background-color: white;
+    width: 375px;
+    height: 812px;
+    margin: auto;
+  }
+}

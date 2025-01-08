@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "@/css/globals.css";
+import "@/styles/globals.css";
 import Header from "@/components/common/Header";
+
 export const metadata: Metadata = {
   title: "DoStep",
   description: "다음 단계로 계속 나아가자",
