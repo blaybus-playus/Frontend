@@ -12,10 +12,11 @@
 
   html {
     background-color: gray;
+    overflow-x: hidden;
+    font-family: 'Pretendard';
   }
 
   body {
-    font-family: 'Pretendard';
     background-color: white;
     width: 375px;
     height: 812px;
