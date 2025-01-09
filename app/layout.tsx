@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Header from "@/components/common/Header";
+import BottomTab from "@/components/common/BottomTab/BottomTab";
 
 export const metadata: Metadata = {
   title: "DoStep",
@@ -15,11 +16,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="bg-primary-100 pt-[104px]">
+      <body className="relative bg-primary-100 pt-[104px]">
         <Header />
-        <div className="w-full px-[16px]">
+        <div className="w-auto mx-[16px] bg-white">
           {children}
         </div>
+        <BottomTab />
       </body>
     </html>
   );

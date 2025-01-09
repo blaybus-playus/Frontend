@@ -1,0 +1,43 @@
+'use client'
+
+import Image, { StaticImageData } from 'next/image'
+import { usePathname } from 'next/navigation'
+import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_quest, active_noticeBoard, active_user } from '@/assets/images'
+
+type ContentKey = '홈' | '경험치' | '퀘스트' | '게시판' | '사용자';
+
+const pathToContent: Record<string, ContentKey> = {
+  '': '홈',
+  'exp': '경험치',
+  'quest': '퀘스트',
+  'board': '게시판',
+  'user': '사용자'
+};
+
+const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticImageData }> = {
+  '홈': { default: home, active: active_home },
+  '경험치': { default: exp, active: active_exp },
+  '퀘스트': { default: quest, active: active_quest },
+  '게시판': { default: noticeBoard, active: active_noticeBoard },
+  '사용자': { default: user, active: active_user }
+};
+
+const BottomTabItem = ({ content }: { content: ContentKey }) => {
+  const pathname = usePathname();
+  const currentPath = pathname.split("/").pop() || "";
+  const isActiveTap = pathToContent[currentPath] === content;
+
+  return (
+    <div className='flex-1 flex flex-col items-center'>
+      <Image
+        src={isActiveTap ? imageMap[content].active : imageMap[content].default}
+        alt={`${content} 아이콘`}
+        width={24}
+        height={24}
+      />
+      <span className={`body-regular-12 ${isActiveTap ? '' : 'text-gray-400'}`}>{content}</span>
+    </div>
+  )
+}
+
+export default BottomTabItem
