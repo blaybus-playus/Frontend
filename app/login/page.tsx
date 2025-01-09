@@ -19,12 +19,12 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen bg-white px-4">
       {/* Main Content */}
-      <main className="flex flex-col items-center pt-16">
-        <h1 className="text-3xl font-bold mb-16">두손꼭Do전!</h1>
+      <main className="relative flex flex-col pt-[152px]">
+        <h1 className="headline-semibold-24 font-bold mb-[56px]">로그인</h1>
 
         <form onSubmit={handleSubmit} className="w-full space-y-4">
           <div className="space-y-2">
-            <label className="text-sm text-gray-600">아이디</label>
+            <label className="body-medium-12">아이디</label>
             <Input
               type="text"
               value={formData.username}
