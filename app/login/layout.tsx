@@ -3,11 +3,5 @@ export default function LoginLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="ko">
-      <body>
-        <div>{children}</div>
-      </body>
-    </html>
-  );
+  return <div className="h-full bg-primary-200">{children}</div>;
 }
