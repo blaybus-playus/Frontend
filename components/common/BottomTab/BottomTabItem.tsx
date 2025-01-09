@@ -1,7 +1,7 @@
 'use client'
 
 import Image, { StaticImageData } from 'next/image'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_quest, active_noticeBoard, active_user } from '@/assets/images'
 
 type ContentKey = '홈' | '경험치' | '퀘스트' | '게시판' | '사용자';
@@ -11,7 +11,15 @@ const pathToContent: Record<string, ContentKey> = {
   'exp': '경험치',
   'quest': '퀘스트',
   'board': '게시판',
-  'user': '사용자'
+  'mypage': '사용자'
+};
+
+const contentToPath: Record<ContentKey, string> = {
+  '홈': '/',
+  '경험치': '/exp',
+  '퀘스트': '/quest',
+  '게시판': '/board',
+  '사용자': '/mypage'
 };
 
 const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticImageData }> = {
@@ -23,12 +31,17 @@ const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticIma
 };
 
 const BottomTabItem = ({ content }: { content: ContentKey }) => {
+  const router = useRouter();
   const pathname = usePathname();
   const currentPath = pathname.split("/").pop() || "";
   const isActiveTap = pathToContent[currentPath] === content;
 
+  const handleClick = () => {
+    router.push(contentToPath[content]);
+  };
+
   return (
-    <div className='flex-1 flex flex-col items-center'>
+    <div className='flex-1 flex flex-col items-center cursor-pointer' onClick={handleClick}>
       <Image
         src={isActiveTap ? imageMap[content].active : imageMap[content].default}
         alt={`${content} 아이콘`}
