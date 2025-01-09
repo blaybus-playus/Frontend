@@ -4,7 +4,7 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className="fixed top-0 w-full h-[104px] bg-white z-1000 border-b">
+    <header className="fixed top-0 w-[375px] h-[104px] bg-white z-1000 border-b">
       <div className="absolute bottom-0 w-full h-[56px] flex justify-center items-center">
         <Image
           src={bell}

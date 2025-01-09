@@ -14,9 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="pt-[104px]">
+      <body className="pt-[104px] bg-primary-100">
         <Header />
-        {children}
+        <div className="w-full px-[16px]">
+          {children}
+        </div>
       </body>
     </html>
   );
