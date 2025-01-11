@@ -8,8 +8,8 @@ export const PATH_TO_CONTENT: Record<string, ContentKey> = {
 
 export const CONTENT_TO_PATH: Record<ContentKey, string> = {
   '홈': '/home',
-  '경험치': '/exp',
-  '퀘스트': '/quest',
+  '경험치': '/exp/info',
+  '퀘스트': '/quest/duty',
   '게시판': '/board',
   '사용자': '/mypage'
 };
