@@ -1,10 +1,24 @@
+'use client'
+
 import { bell } from '@/assets/images'
 import Image from 'next/image'
-import React from 'react'
+import { usePathname } from 'next/navigation'
+import { pathTitle } from '@/constant/index'
+import { useAtom } from 'jotai';
+import { currentPathAtom } from './atoms';
+import { useEffect } from 'react'
 
 const Header = () => {
+  const pathname = usePathname();
+  const [currentPath, setCurrentPath] = useAtom(currentPathAtom);
+  const currentTitle = pathTitle[currentPath[1]]
+
+  useEffect(() => {
+    setCurrentPath(pathname.split("/"))
+  }, [pathname, setCurrentPath])
+
   return (
-    <header className="fixed top-0 w-full h-[104px] bg-white z-1000 border-b">
+    <header className="fixed top-0 w-full h-[104px] bg-white z-1000">
       <div className="absolute bottom-0 w-full h-[56px] flex justify-center items-center">
         <Image
           src={bell}
@@ -13,7 +27,7 @@ const Header = () => {
           height={24}
           className="absolute left-[1rem] cursor-pointer"
         />
-        <span className="text-lg font-semibold">동적주소</span>
+        <span className="title-semibold-18">{currentTitle}</span>
       </div>
     </header>
   )

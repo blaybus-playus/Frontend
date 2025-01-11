@@ -13,3 +13,5 @@ export const contentToPath: Record<ContentKey, string> = {
   '게시판': '/board',
   '사용자': '/mypage'
 };
+
+export const tabMenuItems: ContentKey[] = ['홈', '경험치', '퀘스트', '게시판', '사용자'] 

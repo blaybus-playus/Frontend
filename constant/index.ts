@@ -1,2 +1,3 @@
 export { pathTitle } from './header'
-export { pathToContent, contentToPath } from './bottom-tab-item'
+export { pathToContent, contentToPath, tabMenuItems } from './bottom-tab'
+export { TOP_TABS } from './tob-tab'

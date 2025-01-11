@@ -4,6 +4,8 @@ import Image, { StaticImageData } from 'next/image'
 import { usePathname, useRouter } from 'next/navigation'
 import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_quest, active_noticeBoard, active_user } from '@/assets/images'
 import { contentToPath, pathToContent } from '@/constant';
+import { useAtomValue } from 'jotai';
+import { currentPathAtom } from '../atoms';
 
 const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticImageData }> = {
   '홈': { default: home, active: active_home },
@@ -15,9 +17,9 @@ const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticIma
 
 const BottomTabItem = ({ content }: { content: ContentKey }) => {
   const router = useRouter();
-  const pathname = usePathname();
-  const currentPath = pathname.split("/").pop() || "";
-  const isActiveTap = pathToContent[currentPath] === content;
+  const currentPath = useAtomValue(currentPathAtom);
+  const isActiveTap = pathToContent[currentPath.pop() || ""] === content;
+
 
   const handleClick = () => {
     router.push(contentToPath[content]);
