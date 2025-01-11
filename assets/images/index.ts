@@ -11,3 +11,4 @@ export { default as active_home } from "./active-home.svg";
 export { default as active_exp } from "./active-exp.svg";
 export { default as search } from "./search.svg";
 export { default as back } from "./back.svg";
+export { default as logo } from ".header-logo.svg";
