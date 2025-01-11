@@ -18,7 +18,7 @@ const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticIma
 const BottomTabItem = ({ content }: { content: ContentKey }) => {
   const router = useRouter();
   const currentPath = useAtomValue(currentPathAtom);
-  const isActiveTap = PATH_TO_CONTENT[currentPath.pop() || ""] === content;
+  const isActiveTap = PATH_TO_CONTENT[currentPath[1] || ""] === content;
 
 
   const handleClick = () => {
