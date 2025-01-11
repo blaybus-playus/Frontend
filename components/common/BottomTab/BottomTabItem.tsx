@@ -7,7 +7,7 @@ import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_qu
 type ContentKey = '홈' | '경험치' | '퀘스트' | '게시판' | '사용자';
 
 const pathToContent: Record<string, ContentKey> = {
-  '': '홈',
+  'home': '홈',
   'exp': '경험치',
   'quest': '퀘스트',
   'board': '게시판',
@@ -15,7 +15,7 @@ const pathToContent: Record<string, ContentKey> = {
 };
 
 const contentToPath: Record<ContentKey, string> = {
-  '홈': '/',
+  '홈': '/home',
   '경험치': '/exp',
   '퀘스트': '/quest',
   '게시판': '/board',
