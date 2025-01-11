@@ -14,6 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <link rel='manifest' href='/manifest.json' />
       <body>
         {children}
       </body>
