@@ -1,13 +1,15 @@
-/** @type {import('next').NextConfig} */
-import withPWA from 'next-pwa';
+import withPWAFactory from 'next-pwa';
 
-const prod = process.env.NODE_ENV === 'production';
-
-const nextConfig = withPWA({
-  dest: 'public', // PWA 관련 파일이 저장될 디렉토리
-  register: true,
-  skipWaiting: true,
-  disable: prod ? false : true
+const withPWA = withPWAFactory({
+  dest: 'public',                             // 빌드 시 생성될 Service Worker / manifest 등 폴더
+  register: true,                             // SW 자동 등록
+  skipWaiting: true,                          // 새 SW가 생기면 즉시 activate
+  disable: process.env.NODE_ENV === 'development', // 개발환경에서 PWA 비활성화
 });
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+};
+
+export default withPWA(nextConfig);
