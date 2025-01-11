@@ -3,7 +3,7 @@
 import { bell } from '@/assets/images'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { pathTitle } from '@/constant/index'
+import { PATH_TITLE } from '@/constant/index'
 import { useAtom } from 'jotai';
 import { currentPathAtom } from './atoms';
 import { useEffect } from 'react'
@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 const Header = () => {
   const pathname = usePathname();
   const [currentPath, setCurrentPath] = useAtom(currentPathAtom);
-  const currentTitle = pathTitle[currentPath[1]]
+  const currentTitle = PATH_TITLE[currentPath[1]]
 
   useEffect(() => {
     setCurrentPath(pathname.split("/"))

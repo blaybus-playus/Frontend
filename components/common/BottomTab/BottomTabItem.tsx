@@ -1,9 +1,9 @@
 'use client'
 
 import Image, { StaticImageData } from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_quest, active_noticeBoard, active_user } from '@/assets/images'
-import { contentToPath, pathToContent } from '@/constant';
+import { CONTENT_TO_PATH, PATH_TO_CONTENT } from '@/constant';
 import { useAtomValue } from 'jotai';
 import { currentPathAtom } from '../atoms';
 
@@ -18,11 +18,11 @@ const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticIma
 const BottomTabItem = ({ content }: { content: ContentKey }) => {
   const router = useRouter();
   const currentPath = useAtomValue(currentPathAtom);
-  const isActiveTap = pathToContent[currentPath.pop() || ""] === content;
+  const isActiveTap = PATH_TO_CONTENT[currentPath.pop() || ""] === content;
 
 
   const handleClick = () => {
-    router.push(contentToPath[content]);
+    router.push(CONTENT_TO_PATH[content]);
   };
 
   return (

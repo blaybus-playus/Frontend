@@ -1,4 +1,4 @@
-export const pathTitle: pathTitle = {
+export const PATH_TITLE: pathTitle = {
   home: '홈',
   exp: '경험치',
   quest: '퀘스트',

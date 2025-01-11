@@ -1,4 +1,4 @@
-export const pathToContent: Record<string, ContentKey> = {
+export const PATH_TO_CONTENT: Record<string, ContentKey> = {
   'home': '홈',
   'exp': '경험치',
   'quest': '퀘스트',
@@ -6,7 +6,7 @@ export const pathToContent: Record<string, ContentKey> = {
   'mypage': '사용자'
 };
 
-export const contentToPath: Record<ContentKey, string> = {
+export const CONTENT_TO_PATH: Record<ContentKey, string> = {
   '홈': '/home',
   '경험치': '/exp',
   '퀘스트': '/quest',
@@ -14,4 +14,4 @@ export const contentToPath: Record<ContentKey, string> = {
   '사용자': '/mypage'
 };
 
-export const tabMenuItems: ContentKey[] = ['홈', '경험치', '퀘스트', '게시판', '사용자'] 
+export const TAB_MENU_ITEMS: ContentKey[] = ['홈', '경험치', '퀘스트', '게시판', '사용자'] 
