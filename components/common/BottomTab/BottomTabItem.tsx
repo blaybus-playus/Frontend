@@ -1,26 +1,11 @@
 'use client'
 
 import Image, { StaticImageData } from 'next/image'
-import { usePathname, useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_quest, active_noticeBoard, active_user } from '@/assets/images'
-
-type ContentKey = '홈' | '경험치' | '퀘스트' | '게시판' | '사용자';
-
-const pathToContent: Record<string, ContentKey> = {
-  '': '홈',
-  'exp': '경험치',
-  'quest': '퀘스트',
-  'board': '게시판',
-  'mypage': '사용자'
-};
-
-const contentToPath: Record<ContentKey, string> = {
-  '홈': '/',
-  '경험치': '/exp',
-  '퀘스트': '/quest',
-  '게시판': '/board',
-  '사용자': '/mypage'
-};
+import { CONTENT_TO_PATH, PATH_TO_CONTENT } from '@/constant';
+import { useAtomValue } from 'jotai';
+import { currentPathAtom } from '../atoms';
 
 const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticImageData }> = {
   '홈': { default: home, active: active_home },
@@ -32,12 +17,12 @@ const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticIma
 
 const BottomTabItem = ({ content }: { content: ContentKey }) => {
   const router = useRouter();
-  const pathname = usePathname();
-  const currentPath = pathname.split("/").pop() || "";
-  const isActiveTap = pathToContent[currentPath] === content;
+  const currentPath = useAtomValue(currentPathAtom);
+  const isActiveTap = PATH_TO_CONTENT[currentPath[1] || ""] === content;
+
 
   const handleClick = () => {
-    router.push(contentToPath[content]);
+    router.push(CONTENT_TO_PATH[content]);
   };
 
   return (
