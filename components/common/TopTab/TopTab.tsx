@@ -5,13 +5,12 @@ import { cn } from '@/lib/utils';
 import { useAtomValue } from 'jotai';
 import { currentPathAtom } from '../atoms';
 import { useRouter } from 'next/navigation';
-import { EXP_TOP_TABS, QUEST_TOP_TABS, TAB_MAP } from '@/constant';
+import { TAB_MAP } from '@/constant';
 
 const TopTab = () => {
   const router = useRouter();
-  const currentPath = useAtomValue(currentPathAtom);
-  const tabs = TAB_MAP[currentPath[1]] || [];
-
+  const currentPath: string[] = useAtomValue(currentPathAtom);
+  const tabs = TAB_MAP[currentPath[1] as keyof typeof TAB_MAP];
 
   const handleClick = (path: string) => {
     router.push(`/${currentPath[1]}/${path}`);
