@@ -38,7 +38,7 @@ const UserInfoCard = () => {
 
       </div>
       <Progress className="mt-6" value={75} />
-      <div className="text-right body-regular-14 text-primary-400 mt-1.5">85%</div>
+      <div className="text-right body-regular-14 text-primary-400 mt-1.5">75%</div>
     </div >
   )
 }
