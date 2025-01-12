@@ -1,6 +1,6 @@
 import BottomTab from '@/components/common/BottomTab/BottomTab'
 import Header from '@/components/common/Header'
-import TopTab from '@/components/common/TopTab/TopTab';
+import TopTab from '@/components/common/TopTab';
 import React from 'react'
 
 export default function Layout({

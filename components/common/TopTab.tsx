@@ -3,7 +3,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { useAtomValue } from 'jotai';
-import { currentPathAtom } from '../atoms';
+import { currentPathAtom } from './atoms';
 import { useRouter } from 'next/navigation';
 import { TAB_MAP } from '@/constant';
 
