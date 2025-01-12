@@ -1,12 +1,15 @@
+import UserInfoCard from '@/components/common/UserInfoCard'
+import ExpDashBoard from '@/components/exp/info/ExpDashBoard'
+import TotalExpCard from '@/components/exp/info/TotalExpCard'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      {/* 1. 아바타카드 */}
-      {/* 2. 총 누적 경험치 */}
-      {/* 3. 올해 획득한 경험치 */}
-      {/* 4.        작년까지 누적된 경험치 */}
+    <div className='space-y-3.5'>
+      <UserInfoCard bar={false} />
+      <TotalExpCard />
+      <ExpDashBoard type={"current"} />
+      <ExpDashBoard type={"since"} />
     </div>
   )
 }
