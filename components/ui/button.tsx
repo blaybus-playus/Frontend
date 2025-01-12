@@ -5,20 +5,25 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-2xl text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "w-full text-white bg-primary-400 body-medium-16 hover:bg-primary-400",
+          "text-[16px] w-full text-white bg-primary-400 hover:bg-primary-400",
         secondary:
-          "w-full text-white bg-primary-500 body-medium-16 hover:bg-primary-400",
+          "text-[16px] w-full text-white bg-primary-500 hover:bg-primary-400",
         outline:
-          "w-full border border-primary-400 body-medium-16 text-primary-400 bg-background hover:bg-accent hover:text-accent-foreground",
+          "text-[16px] w-full border border-primary-400 text-primary-400 bg-background hover:bg-accent hover:text-accent-foreground",
+        choice:
+          "text-[12px] body-semibold-12 bg-gray-950 text-gray-50",
+        nonchoice:
+          "text-[12px] body-semibold-12 bg-gray-100 text-gray-400"
       },
       size: {
         default: "h-12 rounded-2xl",
-        lg: "h-14   rounded-2xl ",
+        lg: "h-14 rounded-2xl ",
+        sm: "w-[49px] h-[33px] rounded-[40px]"
 
       },
     },
