@@ -2,7 +2,7 @@ import Banner from '@/components/common/Banner'
 import RecentBoard from '@/components/home/RecentBoard'
 import RecentEXP from '@/components/home/RecentExp'
 import TeamQuest from '@/components/home/TeamQuest'
-import UserInfoCard from '@/components/home/UserInfoCard'
+import UserInfoCard from '@/components/common/UserInfoCard'
 import React from 'react'
 
 const page = () => {

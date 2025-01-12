@@ -13,7 +13,7 @@ export default function Layout({
       <div className="relative bg-gray-100 mt-[56px] mb-[85px]">
         <Header />
         <TopTab />
-        <div className="w-auto mx-4 pt-5 bg-gray-100">
+        <div className="w-auto mx-4 py-5 bg-gray-100">
           {children}
         </div>
         <BottomTab />
