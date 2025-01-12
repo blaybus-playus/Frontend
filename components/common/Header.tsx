@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 w-full bg-white z-1000">
-      <div className="w-full h-[56px] flex justify-between items-center pl-[2rem] pr-[1rem]">
+      <div className="w-full h-[56px] flex justify-between items-center pl-[2rem] pr-[2rem]">
         {currentTitle === '홈' ?
           <Image
             src={logo}

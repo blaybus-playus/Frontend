@@ -10,10 +10,10 @@ export default function Layout({
 }>) {
   return (
     <div>
-      <div className="relative bg-gray-200 pt-[56px]">
+      <div className="relative bg-gray-100 pt-[56px] h-[100vh]">
         <Header />
         <TopTab />
-        <div className="w-auto mx-4 bg-gray-200">
+        <div className="w-auto mx-4 pt-5 bg-gray-100">
           {children}
         </div>
         <BottomTab />
