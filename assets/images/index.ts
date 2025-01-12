@@ -12,3 +12,11 @@ export { default as active_exp } from "./active-exp.svg";
 export { default as search } from "./search.svg";
 export { default as back } from "./back.svg";
 export { default as logo } from "./header-logo.svg";
+export { default as man1_avatar } from "./avatar/man1.svg"
+export { default as man2_avatar } from "./avatar/man2.svg"
+export { default as man3_avatar } from "./avatar/man3.svg"
+export { default as man4_avatar } from "./avatar/man4.svg"
+export { default as woman1_avatar } from "./avatar/woman1.svg"
+export { default as woman2_avatar } from "./avatar/woman2.svg"
+export { default as woman3_avatar } from "./avatar/woman3.svg"
+export { default as woman4_avatar } from "./avatar/woman4.svg"
