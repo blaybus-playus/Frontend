@@ -1,9 +1,9 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_KEY;
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function getLogin(userId: userIdProps) {
   try {
     const res = await fetch(`${BASE_URL}/auth/login`, {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -14,8 +14,10 @@ export async function getLogin(userId: userIdProps) {
       const errorData = await res.json();
       throw new Error(errorData.message || '로그인 실패');
     }
+    const result = await res.json();
+    console.log(result)
 
-    return await res.json();
+    return result;
   } catch (error) {
     console.error('Login error:', error);
     throw error;
