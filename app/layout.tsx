@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
 import Providers from "@/components/common/Providers";
+import localFont from "next/font/local";
+
+const pretendard = localFont({
+  src: "../assets/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+});
 
 export const metadata: Metadata = {
   title: "DoStep",
@@ -15,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>
+      <body className={pretendard.className}>
         <Providers>
           {children}
         </Providers>
