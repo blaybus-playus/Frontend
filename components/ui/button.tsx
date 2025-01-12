@@ -13,12 +13,15 @@ const buttonVariants = cva(
           "text-[16px] w-full text-white bg-primary-400 hover:bg-primary-400",
         secondary:
           "text-[16px] w-full text-white bg-primary-500 hover:bg-primary-400",
-        outline:
+        transparent:
           "text-[16px] w-full border border-primary-400 text-primary-400 bg-background hover:bg-accent hover:text-accent-foreground",
         choice:
           "text-[12px] body-semibold-12 bg-gray-950 text-gray-50",
         nonchoice:
-          "text-[12px] body-semibold-12 bg-gray-100 text-gray-400"
+          "text-[12px] body-semibold-12 bg-gray-100 text-gray-400",
+        outline:
+          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-12 rounded-2xl",
