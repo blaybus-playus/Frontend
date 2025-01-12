@@ -1,25 +1,45 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import { useCookies } from 'react-cookie';
+import { useRouter } from 'next/navigation';
+import { useMutation } from '@tanstack/react-query';
+import { getLogin } from '@/api/auth/apis';
 
 export default function Page() {
-  const [formData, setFormData] = useState({
-    username: '',
-    password: ''
-  })
+  const router = useRouter();
+  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [cookies, setCookie] = useCookies(['accessToken', 'refreshToken']);
+
+  const isFormValid = formData.username.length > 0 && formData.password.length > 0;
+
+  const { mutate } = useMutation({
+    mutationFn: (data: userIdProps) => getLogin(data),
+    onSuccess: (data) => {
+      if (data?.result?.tokenStore) {
+        const { accessToken, refreshToken } = data.result.tokenStore;
+
+        setCookie('accessToken', accessToken);
+        setCookie('refreshToken', refreshToken);
+
+        console.log('로그인 성공');
+        router.push('/home');
+      }
+    }
+  });
+
+  useEffect(() => {
+    if (cookies.accessToken) {
+      router.push('/home')
+    }
+  }, [cookies.accessToken, router])
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle login logic here
-    console.log('Login attempt:', formData)
-  }
-
-  // 입력 값이 모두 채워졌는지 확인
-  const isFormValid = formData.username.trim() !== '' && formData.password.trim() !== ''
-
-
+    e.preventDefault();
+    mutate(formData);
+  };
 
   return (
     <div className="mx-4">
@@ -29,23 +49,23 @@ export default function Page() {
 
         <form onSubmit={handleSubmit} className="w-full space-y-4">
           <div className="space-y-3">
-            <label className="body-medium-12 text-gray-800">아이디</label>
+            <label className="body-medium-14 text-gray-800">아이디</label>
             <Input
               type="text"
               value={formData.username}
               onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0 rounded-[16px]"
+              className="w-full h-12 bg-gray-100 border-0"
               required
             />
           </div>
 
           <div className="space-y-2">
-            <label className="body-medium-12 text-gray-800">비밀번호</label>
+            <label className="body-medium-14 text-gray-800">비밀번호</label>
             <Input
               type="password"
               value={formData.password}
               onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0 rounded-[16px]"
+              className="w-full h-12 bg-gray-100 border-0"
               required
             />
           </div>
@@ -59,11 +79,6 @@ export default function Page() {
           </Button>
         </form>
       </main>
-
-      {/* Home Indicator */}
-      <div className="fixed bottom-0 left-0 right-0 flex justify-center pb-2">
-        <div className="w-32 h-1 bg-black rounded-full"></div>
-      </div>
     </div>
   )
 }

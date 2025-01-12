@@ -1,6 +1,6 @@
 'use client'
 
-import { bell } from '@/assets/images'
+import { bell, logo } from '@/assets/images'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { PATH_TITLE } from '@/constant/index'
@@ -18,16 +18,24 @@ const Header = () => {
   }, [pathname, setCurrentPath])
 
   return (
-    <header className="fixed top-0 w-full h-[104px] bg-white z-1000">
-      <div className="absolute bottom-0 w-full h-[56px] flex justify-center items-center">
+    <header className="fixed top-0 w-full bg-white z-1000">
+      <div className="w-full h-[56px] flex justify-between items-center pl-[2rem] pr-[2rem]">
+        {currentTitle === '홈' ?
+          <Image
+            src={logo}
+            alt={'로고'}
+            width={54}
+            height={30}
+            className='cursor-pointer'
+          /> :
+          <span className="title-semibold-18">{currentTitle}</span>}
         <Image
           src={bell}
           alt="Notifications"
           width={24}
           height={24}
-          className="absolute left-[1rem] cursor-pointer"
+          className="cursor-pointer"
         />
-        <span className="title-semibold-18">{currentTitle}</span>
       </div>
     </header>
   )

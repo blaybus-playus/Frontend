@@ -1,11 +1,8 @@
-import { redirect } from 'next/navigation'
-import React from 'react'
+export default function Page() {
 
-const page = () => {
-  redirect('/home')
   return (
-    <></>
+    <div className="flex justify-center items-center w-full h-[100vh] title-semibold-20">
+      정보 불러오는 중...
+    </div>
   )
 }
-
-export default page

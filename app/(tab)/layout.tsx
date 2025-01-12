@@ -1,6 +1,6 @@
 import BottomTab from '@/components/common/BottomTab/BottomTab'
 import Header from '@/components/common/Header'
-import TopTab from '@/components/common/TopTab/TopTab';
+import TopTab from '@/components/common/TopTab';
 import React from 'react'
 
 export default function Layout({
@@ -10,10 +10,10 @@ export default function Layout({
 }>) {
   return (
     <div>
-      <div className="relative bg-primary-100 pt-[104px]">
+      <div className="relative bg-gray-100 mt-[56px] mb-[85px]">
         <Header />
         <TopTab />
-        <div className="w-auto mx-4 bg-white">
+        <div className="w-auto mx-4 pt-5 bg-gray-100">
           {children}
         </div>
         <BottomTab />

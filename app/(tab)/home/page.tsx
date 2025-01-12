@@ -1,13 +1,18 @@
+import Banner from '@/components/common/Banner'
+import RecentBoard from '@/components/home/RecentBoard'
+import RecentEXP from '@/components/home/RecentExp'
+import TeamQuest from '@/components/home/TeamQuest'
+import UserInfoCard from '@/components/home/UserInfoCard'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <div className='h-[300px] bg-primary-100' />
-      <div className='h-[300px] bg-primary-200' />
-      <div className='h-[300px] bg-primary-300' />
-      <div className='h-[300px] bg-primary-400' />
-      <div className='h-[300px] bg-primary-500' />
+    <div className='space-y-3.5'>
+      <UserInfoCard />
+      <RecentEXP />
+      <TeamQuest />
+      <Banner />
+      <RecentBoard />
     </div>
   )
 }
