@@ -49,23 +49,23 @@ export default function Page() {
 
         <form onSubmit={handleSubmit} className="w-full space-y-4">
           <div className="space-y-3">
-            <label className="body-medium-12 text-gray-800">아이디</label>
+            <label className="body-medium-14 text-gray-800">아이디</label>
             <Input
               type="text"
               value={formData.username}
               onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0 rounded-[16px]"
+              className="w-full h-12 bg-gray-100 border-0"
               required
             />
           </div>
 
           <div className="space-y-2">
-            <label className="body-medium-12 text-gray-800">비밀번호</label>
+            <label className="body-medium-14 text-gray-800">비밀번호</label>
             <Input
               type="password"
               value={formData.password}
               onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0 rounded-[16px]"
+              className="w-full h-12 bg-gray-100 border-0"
               required
             />
           </div>
