@@ -1,4 +1,4 @@
-import { quest_badge_leader, quest_badge_special } from '@/assets/images'
+import { quest_badge_leader } from '@/assets/images'
 import ContentLayout from '@/components/common/ContentLayout'
 import Image from 'next/image'
 import React from 'react'
