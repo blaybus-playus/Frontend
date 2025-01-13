@@ -1,5 +1,5 @@
 import React from 'react'
-import QuestView from '../common/QuestView'
+import QuestView from './QuestView'
 
 const TeamQuest = () => {
   return (

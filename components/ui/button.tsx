@@ -16,18 +16,17 @@ const buttonVariants = cva(
         transparent:
           "text-[16px] w-full border border-primary-400 text-primary-400 bg-background hover:bg-accent hover:text-accent-foreground",
         choice:
-          "text-[12px] body-semibold-12 bg-gray-950 text-gray-50",
+          "text-[12px] body-semibold-12 bg-gray-950 text-gray-50 hover:bg-gray-950",
         nonchoice:
-          "text-[12px] body-semibold-12 bg-gray-100 text-gray-400",
+          "text-[12px] body-semibold-12 bg-gray-200 text-gray-400 hover:bg-gray-950",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "text-[16px] w-full text-primary-400 transparent border border-primary-400 hover:bg-primary-400",
         ghost: "hover:bg-accent hover:text-accent-foreground",
       },
       size: {
         default: "h-12 rounded-2xl",
         lg: "h-14 rounded-2xl ",
         sm: "w-[49px] h-[33px] rounded-[40px]"
-
       },
     },
     defaultVariants: {

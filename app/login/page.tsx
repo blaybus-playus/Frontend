@@ -54,7 +54,8 @@ export default function Page() {
               type="text"
               value={formData.username}
               onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0"
+              className="w-full h-12 bg-gray-100 border-0 placeholder:body-medium-14 placeholder:text-gray-400"
+              placeholder='아이디를 입력하세요.'
               required
             />
           </div>
@@ -65,7 +66,8 @@ export default function Page() {
               type="password"
               value={formData.password}
               onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0"
+              className="w-full h-12 bg-gray-100 border-0 placeholder:body-medium-14 placeholder:text-gray-400"
+              placeholder='비밀번호를 입력하세요.'
               required
             />
           </div>
@@ -73,6 +75,7 @@ export default function Page() {
           <Button
             type="submit"
             className={`body-medium-16 text-white absolute bottom-11 w-full h-14 mt-8 rounded-[16px] ${isFormValid ? 'bg-primary-400 hover:bg-primary-500' : 'bg-gray-400'}`}
+            variant={"default"}
             disabled={!isFormValid}
           >
             로그인하기
