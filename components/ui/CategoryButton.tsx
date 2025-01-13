@@ -1,4 +1,4 @@
-import { Button, buttonVariants } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import React from 'react'
 
 interface CategoryButtonProps {
@@ -10,11 +10,10 @@ interface CategoryButtonProps {
 const CategoryButton = ({ tab, variant, onClick }: CategoryButtonProps) => {
   return (
     <Button
-      className={buttonVariants({
-        variant: variant,
-        size: 'sm',
-      })}
-      onClick={onClick}
+      variant={variant}
+      size={'sm'}
+      onClick={onClick
+      }
     >
       {tab}
     </Button>

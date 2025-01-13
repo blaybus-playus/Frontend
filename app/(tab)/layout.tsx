@@ -9,15 +9,13 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
-      <div className="relative bg-gray-100 mt-[56px] mb-[85px]">
-        <Header />
-        <TopTab />
-        <div className="w-auto mx-4 py-5 bg-gray-100">
-          {children}
-        </div>
-        <BottomTab />
-      </div>
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Header />
+      <TopTab />
+      <main className="flex-1 mb-[85px] w-auto mx-4 py-5">
+        {children}
+      </main>
+      <BottomTab />
     </div>
   )
 }
