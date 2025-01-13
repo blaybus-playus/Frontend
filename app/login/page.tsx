@@ -54,7 +54,8 @@ export default function Page() {
               type="text"
               value={formData.username}
               onChange={(e) => setFormData(prev => ({ ...prev, username: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0"
+              className="w-full h-12 bg-gray-100 border-0 placeholder:body-medium-14 placeholder:text-gray-400"
+              placeholder='아이디를 입력하세요.'
               required
             />
           </div>
@@ -65,7 +66,8 @@ export default function Page() {
               type="password"
               value={formData.password}
               onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
-              className="w-full h-12 bg-gray-100 border-0"
+              className="w-full h-12 bg-gray-100 border-0 placeholder:body-medium-14 placeholder:text-gray-400"
+              placeholder='비밀번호를 입력하세요.'
               required
             />
           </div>
