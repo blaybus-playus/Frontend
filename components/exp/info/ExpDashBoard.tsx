@@ -1,7 +1,7 @@
 import { Progress } from '@/components/ui/progress'
 import { EXP_DASH_BOARD_TYPE } from '@/constant'
-import { HelpCircle } from 'lucide-react'
 import React from 'react'
+import { LevelDialog } from './LevelDialog'
 
 const ExpDashBoard = ({ type }: { type: 'current' | 'since' }) => {
   const dashboard = EXP_DASH_BOARD_TYPE[type];
@@ -19,7 +19,8 @@ const ExpDashBoard = ({ type }: { type: 'current' | 'since' }) => {
             </div>
             <div className="flex items-center justify-center gap-2">
               <span className="text-primary-400 headline-bold-24">F1 - I</span>
-              <HelpCircle className="w-5 h-5 text-primary-300" />
+              {/* <HelpCircle className="w-5 h-5 text-primary-300" /> */}
+              <LevelDialog />
             </div>
           </div>
 
