@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import {
   Accordion,
   AccordionContent,
@@ -15,7 +17,8 @@ interface QuestHistoryProps {
 
 const QuestHistory = ({ title, index }: QuestHistoryProps) => {
   const randomBadges = ['special', 'zikmu', 'jeonsa', 'leader', 'insa', 'random_1', 'random2', 'random3'];
-
+  const [open, setOpen] = useState(false);
+  console.log(open)
   // const randomIndex = Math.floor(Math.random() * randomBadges.length);
   // const badgeKey = randomBadges[randomIndex];
 
@@ -35,8 +38,8 @@ const QuestHistory = ({ title, index }: QuestHistoryProps) => {
   return (
     <Accordion type="single" collapsible className='bg-white rounded-2xl'>
       <AccordionItem value="item-1">
-        <AccordionTrigger>
-          <div className='flex items-center gap-3'>
+        <AccordionTrigger onClick={() => setOpen(!open)}>
+          <div className='flex items-center gap-3' >
             <Image
               src={badgeImages[randomBadges[index]]}
               alt='badge'
@@ -51,12 +54,19 @@ const QuestHistory = ({ title, index }: QuestHistoryProps) => {
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-primary-300"></div>
             <span className="title-semibold-16">MAX</span>
-            <span className="body-regular-14">4회 이상</span>
+            {open ?
+              <span className="body-regular-14">4회 이상</span>
+              : <span className="title-semibold-16">6</span>
+            }
           </div>
           <div className="flex items-center gap-3">
             <div className="w-3 h-3 rounded-full bg-[#FBD288]"></div>
-            <span className="title-semibold-16">MIDEUM</span>
-            <span className="body-regular-14">2회 이상</span>
+            <span className="title-semibold-16">MEDIUM</span>
+            {open ?
+              <span className="body-regular-14">2회 이상</span>
+              :
+              <span className="title-semibold-16">4</span>
+            }
           </div>
         </div>
         <div className='w-full h-4'></div>
