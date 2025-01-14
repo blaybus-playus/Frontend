@@ -35,3 +35,5 @@ export { default as quest_badge_jeonsa } from "./quest-badge/전사 프로젝트
 export { default as quest_badge_zikmu } from "./quest-badge/직무별 퀘스트.svg"
 export { default as quest_badge_special } from "./quest-badge/특근.svg"
 export { default as banner_01 } from "./banner_01.svg"
+export { default as loud_speaker } from "./loud-speaker.svg"
+export { default as magnifier } from "./magnifier.svg"

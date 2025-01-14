@@ -17,7 +17,7 @@ const TopTab = () => {
   };
 
   return (
-    <>
+    <div className='pt-[56px]'>
       {tabs &&
         <div className="w-full bg-white h-[48px]">
           <div className="flex">
@@ -39,7 +39,7 @@ const TopTab = () => {
             })}
           </div>
         </div>}
-    </>
+    </div>
   );
 };
 
