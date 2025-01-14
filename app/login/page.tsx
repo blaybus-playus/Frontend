@@ -16,6 +16,7 @@ export default function Page() {
   const { toast } = useToast()
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [cookies, setCookie] = useCookies(['accessToken', 'refreshToken']);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [userInfo, setUserInfo] = useAtom(userInfoAtom);
 
   const isFormValid = formData.username.length > 0 && formData.password.length > 0;
