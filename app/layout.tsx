@@ -10,10 +10,18 @@ const pretendard = localFont({
   weight: "45 920",
 });
 
+export const viewport = {
+  themeColor: "#ffffff",
+};
+
 export const metadata: Metadata = {
   title: "DoStep",
   description: "두핸즈 사내앱",
   manifest: '/manifest.json',
+  viewport: "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
+  icons: [
+    { rel: "icon", url: "/assets/app_icon.png", sizes: "192x192" }
+  ]
 };
 
 export default function RootLayout({
