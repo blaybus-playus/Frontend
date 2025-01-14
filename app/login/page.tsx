@@ -30,7 +30,7 @@ export default function Page() {
         router.push('/home');
       }
     },
-    onError: (e) => {
+    onError: () => {
       toast({
         title: "로그인에 실패하였습니다.",
         description: `아이디와 비밀번호를 확인하세요.`,
