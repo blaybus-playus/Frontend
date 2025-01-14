@@ -82,7 +82,7 @@ export default function Page() {
 
           <Button
             type="submit"
-            className={`body-medium-16 text-white absolute bottom-11 w-full h-14 mt-8 rounded-[16px] ${isFormValid ? 'bg-primary-400 hover:bg-primary-500' : 'bg-gray-400'}`}
+            className={`body-medium-16 text-white absolute bottom-11 w-full h-14 mt-8 rounded-[16px] ${isFormValid ? 'bg-primary-400 hover:bg-primary-500 text-gray-50' : 'bg-gray-400'}`}
             variant={"default"}
             disabled={!isFormValid}
           >

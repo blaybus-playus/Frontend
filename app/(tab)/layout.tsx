@@ -9,7 +9,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen bg-[#F6F7F9]">
       <Header />
       <TopTab />
       <main className="flex-1 mb-[85px] w-auto mx-4 py-5">
