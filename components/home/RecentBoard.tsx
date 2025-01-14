@@ -1,15 +1,24 @@
-import React from 'react'
-import { Button } from '../ui/button'
+'use client'
+
+import React, { useState } from 'react'
+import CategoryButton from '../ui/CategoryButton';
 
 const RecentBoard = () => {
+  const [category, setCategory] = useState("전체");
+  const tabs = ['전체', '부서1', '부서2', '부서3'];
+
   return (
     <div className='p-4 bg-gray-50 space-y-5 rounded-2xl'>
       <h2 className='title-semibold-16 text-gray-950'>최근 게시글</h2>
       <div className='flex gap-2'>
-        <Button variant={"choice"} size={"sm"}>전체</Button>
-        <Button variant={"nonchoice"} size={"sm"}>부서1</Button>
-        <Button variant={"nonchoice"} size={"sm"}>부서2</Button>
-        <Button variant={"nonchoice"} size={"sm"}>부서3</Button>
+        {tabs.map((tab) => (
+          <CategoryButton
+            key={tab}
+            tab={tab}
+            variant={category === tab ? 'choice' : 'nonchoice'}
+            onClick={() => setCategory(tab)}
+          />
+        ))}
       </div>
       <div className='space-y-3.5 bg-primary-100 rounded-2xl px-4 py-5'>
         <div className='flex items-center gap-1.5'>
