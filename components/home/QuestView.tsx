@@ -5,7 +5,7 @@ import { Button } from '../ui/button'
 
 const QuestView = () => {
   return (
-    <div className='bg-primary-100 rounded-2xl py-5 px-4'>
+    <div className='bg-[#FFF3F0] rounded-2xl py-5 px-4'>
       <div className='flex items-center gap-3'>
         <Image
           src={quest_badge_special}

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { PATH_TITLE } from '@/constant/index'
 import { useAtom } from 'jotai';
-import { currentPathAtom } from './atoms';
+import { currentPathAtom } from '../../store/atoms';
 import { useEffect } from 'react'
 
 const Header = () => {

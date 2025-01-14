@@ -20,7 +20,7 @@ const buttonVariants = cva(
         nonchoice:
           "text-[12px] body-semibold-12 bg-gray-200 text-gray-400 hover:bg-gray-950",
         outline:
-          "text-[16px] w-full text-primary-400 transparent border border-primary-400 hover:bg-primary-400",
+          "text-[16px] w-full text-primary-400 transparent border border-primary-400 hover:bg-primary-400 hover:text-white",
         ghost: "hover:bg-accent hover:text-accent-foreground",
       },
       size: {

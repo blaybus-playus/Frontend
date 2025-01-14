@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { home, exp, quest, noticeBoard, user, active_home, active_exp, active_quest, active_noticeBoard, active_user } from '@/assets/images'
 import { CONTENT_TO_PATH, PATH_TO_CONTENT } from '@/constant';
 import { useAtomValue } from 'jotai';
-import { currentPathAtom } from '../atoms';
+import { currentPathAtom } from '../../../store/atoms';
 
 const imageMap: Record<ContentKey, { default: StaticImageData, active: StaticImageData }> = {
   '홈': { default: home, active: active_home },
