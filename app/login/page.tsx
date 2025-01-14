@@ -6,25 +6,35 @@ import { Input } from "@/components/ui/input"
 import { useCookies } from 'react-cookie';
 import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
-import { getLogin } from '@/api/auth/apis';
+import { postLogin } from '@/api/auth/apis';
 import { useToast } from '@/hooks/use-toast';
+import { useAtom } from 'jotai';
+import { userInfoAtom } from '@/store/atoms';
 
 export default function Page() {
   const router = useRouter();
   const { toast } = useToast()
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [cookies, setCookie] = useCookies(['accessToken', 'refreshToken']);
+  const [userInfo, setUserInfo] = useAtom(userInfoAtom);
 
   const isFormValid = formData.username.length > 0 && formData.password.length > 0;
 
   const { mutate } = useMutation({
-    mutationFn: (data: userIdProps) => getLogin(data),
+    mutationFn: (data: userIdProps) => postLogin(data),
     onSuccess: (data) => {
       if (data?.result?.tokenStore) {
         const { accessToken, refreshToken } = data.result.tokenStore;
 
         setCookie('accessToken', accessToken);
         setCookie('refreshToken', refreshToken);
+        setUserInfo({
+          name: data.result.personalInfo.name,
+          employeeId: data.result.employeeId,
+          department: data.result.personalInfo.department,
+          joinDate: data.result.personalInfo.joinDate,
+          level: data.result.personalInfo.level
+        })
 
         console.log('로그인 성공');
         router.push('/home');
