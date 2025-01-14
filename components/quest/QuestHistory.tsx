@@ -14,7 +14,7 @@ interface QuestHistoryProps {
 }
 
 const QuestHistory = ({ title, index }: QuestHistoryProps) => {
-  const randomBadges = ['zikmu', 'jeonsa', 'leader', 'insa', 'random_1', 'random2', 'random3'];
+  const randomBadges = ['special', 'zikmu', 'jeonsa', 'leader', 'insa', 'random_1', 'random2', 'random3'];
 
   // const randomIndex = Math.floor(Math.random() * randomBadges.length);
   // const badgeKey = randomBadges[randomIndex];

@@ -38,7 +38,7 @@ const Page = () => {
         {boards.map((board) => (
           <div
             key={board}
-            className='bg-gray-50 p-4 space-y-4'
+            className='bg-gray-50 p-4 space-y-4 rounded-2xl'
           >
             <h2 className='body-semibold-14 text-gray-800'>{board}<span className='ml-1.5 caption-medium-11 text-gray-400'>• 25분 전</span></h2>
             <div className='body-medium-14'>AAA 프로젝트 신설 (경험치 500 do, 신청 마감 ~10/31), 잡초이스 공고(신청 마감 ~11/20)</div>
