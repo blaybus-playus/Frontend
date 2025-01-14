@@ -7,9 +7,11 @@ import { useCookies } from 'react-cookie';
 import { useRouter } from 'next/navigation';
 import { useMutation } from '@tanstack/react-query';
 import { getLogin } from '@/api/auth/apis';
+import { useToast } from '@/hooks/use-toast';
 
 export default function Page() {
   const router = useRouter();
+  const { toast } = useToast()
   const [formData, setFormData] = useState({ username: '', password: '' });
   const [cookies, setCookie] = useCookies(['accessToken', 'refreshToken']);
 
@@ -27,6 +29,12 @@ export default function Page() {
         console.log('로그인 성공');
         router.push('/home');
       }
+    },
+    onError: () => {
+      toast({
+        title: "로그인에 실패하였습니다.",
+        description: `아이디와 비밀번호를 확인하세요.`,
+      })
     }
   });
 
