@@ -11,8 +11,8 @@ import React from 'react'
 
 const Page = () => {
   const router = useRouter();
-  const [userInfo, setUserInfo] = useAtom(userInfoAtom);
-  const { isAuthenticated, logout } = useAuth();
+  const [userInfo] = useAtom(userInfoAtom);
+  const { logout } = useAuth();
 
   return (
     <div className='h-full'>

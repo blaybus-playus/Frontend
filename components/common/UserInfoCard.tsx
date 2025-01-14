@@ -8,7 +8,7 @@ import { useAtom } from 'jotai'
 import { userInfoAtom } from '@/store/atoms'
 
 const UserInfoCard = ({ bar }: { bar: boolean }) => {
-  const [userInfo, setUserInfo] = useAtom(userInfoAtom);
+  const [userInfo] = useAtom(userInfoAtom);
   const level = userInfo.level.slice(0, 2);
 
   return (
