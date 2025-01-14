@@ -6,11 +6,23 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/:path*", // 모든 /api/* 요청을 프록시
-        destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`, // 실제 API 서버로 요청 전달
+        source: "/:path*",
+        destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`,
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Access-Control-Allow-Origin", value: "*" },
+          { key: "Access-Control-Allow-Methods", value: "GET,POST,PUT,DELETE" },
+          { key: "Access-Control-Allow-Headers", value: "Content-Type" }
+        ],
+      },
+    ];
+  }
 };
 
 // PWA 설정과 함께 Next.js 설정을 내보냅니다.
