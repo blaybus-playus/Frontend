@@ -1,6 +1,6 @@
 'use client'
 
-import { loud_speaker, magnifier } from '@/assets/images'
+import { loud_speaker } from '@/assets/images'
 import Banner from '@/components/common/Banner'
 import CategoryButton from '@/components/ui/CategoryButton'
 import Image from 'next/image'
