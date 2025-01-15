@@ -56,7 +56,7 @@ const RecentBoard = () => {
       </div>
 
       {/* Map through filtered posts instead of hardcoded notices */}
-      {filteredPosts.map((post: Post) => (
+      {filteredPosts.slice(0, 4).map((post: Post) => (
         <div
           key={post.id}
           className='space-y-3.5 bg-[#FFF3F0] rounded-2xl px-4 py-5'

@@ -67,8 +67,8 @@ const Page = () => {
             className='bg-gray-50 p-4 space-y-4 rounded-2xl'
             onClick={() => router.push(`/board/${post.id}`)}
           >
-            <h2 className='body-semibold-14 text-gray-800'>{post.content}<span className='ml-1.5 caption-medium-11 text-gray-400'>• 00분 전</span></h2>
-            <div className='body-medium-14'>{post.title}</div>
+            <h2 className='body-semibold-14 text-gray-800'>{post.title}<span className='ml-1.5 caption-medium-11 text-gray-400'>•</span></h2>
+            <div className='body-medium-14'>{post.content}</div>
           </div>
         ))}
       </div>
