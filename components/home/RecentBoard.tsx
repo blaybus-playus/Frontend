@@ -5,8 +5,11 @@ import CategoryButton from '../ui/CategoryButton'
 import { useQuery } from '@tanstack/react-query'
 import { getPosts } from '@/api/board/api'
 import { Cookies } from 'react-cookie'
+import { useRouter } from 'next/navigation'
+import { Skeleton } from '../ui/skeleton'
 
 const RecentBoard = () => {
+  const router = useRouter();
   const cookies = new Cookies()
   const accessToken = cookies.get('accessToken')
   const [category, setCategory] = useState("전체")
@@ -18,7 +21,13 @@ const RecentBoard = () => {
   })
 
   if (isLoading) {
-    return <div>로딩 중...</div>
+    return (
+      <div className="space-y-4">
+        <Skeleton className="w-full h-[200px] rounded-2xl bg-gray-200 dark:bg-gray-700"></Skeleton>
+        <Skeleton className="w-full h-[125px] rounded-2xl bg-gray-200 dark:bg-gray-700"></Skeleton>
+        <Skeleton className="w-full h-[280px] rounded-2xl bg-gray-200 dark:bg-gray-700"></Skeleton>
+      </div>
+    )
   }
 
   if (isError) {
@@ -48,7 +57,11 @@ const RecentBoard = () => {
 
       {/* Map through filtered posts instead of hardcoded notices */}
       {filteredPosts.map((post: Post) => (
-        <div key={post.id} className='space-y-3.5 bg-[#FFF3F0] rounded-2xl px-4 py-5'>
+        <div
+          key={post.id}
+          className='space-y-3.5 bg-[#FFF3F0] rounded-2xl px-4 py-5'
+          onClick={() => router.push(`/board/${post.id}`)}
+        >
           <div className='flex items-center gap-1.5'>
             <h3 className='text-primary-400 body-semibold-12'>
               [{post.jobGroup || '공지'}]
