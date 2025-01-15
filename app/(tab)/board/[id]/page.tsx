@@ -1,3 +1,4 @@
+import BackHeader from '@/components/common/BackHeader'
 import React from 'react'
 
 interface BoardDetailPageProps {
@@ -10,9 +11,9 @@ export default async function BoardDetailPage({ params }: BoardDetailPageProps) 
   const { id } = params
 
   return (
-    <div>
+    <div className='flex flex-col min-h-screen bg-[#F6F7F9]'>
+      <BackHeader title='게시판' />
       {id}
     </div>
   )
-
 }
