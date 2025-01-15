@@ -3,7 +3,13 @@ import { EXP_DASH_BOARD_TYPE } from '@/constant'
 import React from 'react'
 import { LevelDialog } from './LevelDialog'
 
-const ExpDashBoard = ({ type }: { type: 'current' | 'since' }) => {
+interface ExpDashBoardProps {
+  type: 'current' | 'since'
+  firstExp: number
+  secondExp: number
+}
+
+const ExpDashBoard = ({ type, firstExp, secondExp }: ExpDashBoardProps) => {
   const dashboard = EXP_DASH_BOARD_TYPE[type];
 
   return (
@@ -34,11 +40,11 @@ const ExpDashBoard = ({ type }: { type: 'current' | 'since' }) => {
         <div className="space-y-4 pt-4">
           <div className="flex justify-between items-center">
             <span className="body-regular-14 text-gray-950">{dashboard.total}</span>
-            <span className="body-semibold-14 text-gray-950">3,500 do</span>
+            <span className="body-semibold-14 text-gray-950">{firstExp} do</span>
           </div>
           <div className="flex justify-between items-center border-t pt-4">
             <span className="body-regular-14 text-gray-950">{dashboard.other}</span>
-            <span className="body-semibold-14 text-gray-950">9,000 do</span>
+            <span className="body-semibold-14 text-gray-950">{secondExp} do</span>
           </div>
         </div>
       </div>

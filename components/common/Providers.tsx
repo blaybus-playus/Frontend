@@ -18,7 +18,7 @@ export default function Providers({ children }: ProvidersProps) {
 
   useEffect(() => {
     if (!isAuthenticated) {
-      // router.replace('/login') 
+      router.replace('/login')
     } else {
       router.replace('/home');
     }

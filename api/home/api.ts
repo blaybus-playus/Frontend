@@ -1,16 +1,16 @@
-export async function getPosts(token: string) {
+export async function getExpInfo(token: string) {
   try {
-    const res = await fetch('/api/board/read/all', {
+    const res = await fetch('/api/employee/info/exp', {
       method: 'GET',
       headers: {
-        'Authorization': ` ${token}`,
+        'Authorization': `${token}`,
         'Content-Type': 'application/json',
       },
     });
 
     if (!res.ok) {
       const errorData = await res.json();
-      throw new Error(errorData.message || '로그인 실패');
+      throw new Error(errorData.message || '(exp-info) 조회 실패');
     }
     const result = await res.json();
     console.log(result)
@@ -21,3 +21,4 @@ export async function getPosts(token: string) {
     throw error;
   }
 }
+
