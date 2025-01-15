@@ -11,6 +11,18 @@ const nextConfig = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "Access-Control-Allow-Origin", value: "*" },
+          { key: "Access-Control-Allow-Methods", value: "GET,POST,PUT,DELETE" },
+          { key: "Access-Control-Allow-Headers", value: "Content-Type" }
+        ],
+      },
+    ];
+  }
 };
 
 // PWA 설정과 함께 Next.js 설정을 내보냅니다.

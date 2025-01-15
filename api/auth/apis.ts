@@ -7,6 +7,7 @@ export async function postLogin(userId: userIdProps) {
       headers: {
         'Content-Type': 'application/json',
       },
+      credentials: 'include',
       body: JSON.stringify(userId),
     });
 
