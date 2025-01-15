@@ -6,8 +6,8 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/:path*",
-        destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`,
+        source: "/api/:path*", // 모든 /api/* 요청을 프록시
+        destination: `${process.env.NEXT_PUBLIC_API_URL}/api/:path*`, // 실제 API 서버로 요청 전달
       },
     ];
   },

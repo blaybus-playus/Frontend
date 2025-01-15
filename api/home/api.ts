@@ -1,19 +1,16 @@
-// const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
-export async function postLogin(userId: userIdProps) {
+export async function getExpInfo(token: string) {
   try {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
+    const res = await fetch('/api/employee/info/exp', {
+      method: 'GET',
       headers: {
+        'Authorization': `${token}`,
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
-      body: JSON.stringify(userId),
     });
 
     if (!res.ok) {
       const errorData = await res.json();
-      throw new Error(errorData.message || '로그인 실패');
+      throw new Error(errorData.message || '(exp-info) 조회 실패');
     }
     const result = await res.json();
     console.log(result)
@@ -24,3 +21,4 @@ export async function postLogin(userId: userIdProps) {
     throw error;
   }
 }
+

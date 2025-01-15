@@ -1,14 +1,11 @@
-// const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
-export async function postLogin(userId: userIdProps) {
+export async function getPosts(token: string) {
   try {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
+    const res = await fetch('/api/board/read/all', {
+      method: 'GET',
       headers: {
+        'Authorization': ` ${token}`,
         'Content-Type': 'application/json',
       },
-      credentials: 'include',
-      body: JSON.stringify(userId),
     });
 
     if (!res.ok) {
