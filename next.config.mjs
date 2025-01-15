@@ -3,14 +3,14 @@ import withPWAFactory from 'next-pwa';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  async rewrites() {
-    return [
-      {
-        source: "/:path*", // 모든 /api/* 요청을 프록시
-        destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`, // 실제 API 서버로 요청 전달
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/:path*", // 모든 /api/* 요청을 프록시
+  //       destination: `${process.env.NEXT_PUBLIC_API_URL}/:path*`, // 실제 API 서버로 요청 전달
+  //     },
+  //   ];
+  // },
 };
 
 // PWA 설정과 함께 Next.js 설정을 내보냅니다.
