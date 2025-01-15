@@ -3,5 +3,6 @@ type userInfo = {
   employeeId: string
   department: string
   joinDate: string
+  joinGroup: string
   level: string
 }

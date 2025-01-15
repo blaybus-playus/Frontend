@@ -24,17 +24,18 @@ export default function Page() {
   const { mutate } = useMutation({
     mutationFn: (data: userIdProps) => postLogin(data),
     onSuccess: (data) => {
-      if (data?.result?.tokenStore) {
-        const { accessToken, refreshToken } = data.result.tokenStore;
+      if (data?.tokenStore) {
+        const { accessToken, refreshToken } = data.tokenStore;
 
         setCookie('accessToken', accessToken);
         setCookie('refreshToken', refreshToken);
         setUserInfo({
-          name: data.result.personalInfo.name,
-          employeeId: data.result.employeeId,
-          department: data.result.personalInfo.department,
-          joinDate: data.result.personalInfo.joinDate,
-          level: data.result.personalInfo.level
+          name: data.personalInfo.name,
+          employeeId: data.employeeId,
+          department: data.personalInfo.department,
+          joinDate: data.personalInfo.joinDate,
+          joinGroup: data.personalInfo.JoinGroup,
+          level: data.personalInfo.level,
         })
 
         console.log('로그인 성공');

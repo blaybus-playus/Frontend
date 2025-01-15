@@ -6,5 +6,6 @@ export const userInfoAtom = atom<userInfo>({
   employeeId: '2023010101',
   department: '음성 1센터',
   joinDate: '2023-01-01',
+  joinGroup: "1",
   level: 'F1-Ⅰ',
 });
