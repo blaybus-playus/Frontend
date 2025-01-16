@@ -1,6 +1,6 @@
 'use client'
 
-import { quest_badge_jeonsa, quest_badge_leader } from '@/assets/images'
+import { quest_badge_jeonsa } from '@/assets/images'
 import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'

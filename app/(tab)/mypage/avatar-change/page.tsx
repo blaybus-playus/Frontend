@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation'
 import React from 'react'
 
 const Page = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [myAvatar, setMyAvatar] = useAtom(avatar);
   const router = useRouter()
 

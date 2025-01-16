@@ -1,6 +1,6 @@
 'use client'
 
-import { bell, logo, magnifier } from '@/assets/images'
+import { logo, magnifier } from '@/assets/images'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { PATH_TITLE } from '@/constant/index'

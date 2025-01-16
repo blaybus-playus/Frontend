@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import Image from 'next/image'
-import { quest_badge_leader, quest_badge_special } from '@/assets/images'
+import { quest_badge_leader } from '@/assets/images'
 
 
 const QuestHistory5 = () => {

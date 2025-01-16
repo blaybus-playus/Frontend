@@ -7,7 +7,6 @@ import Image from 'next/image'
 import React from 'react'
 
 const ExpRecent = () => {
-  const RECENT_SCORE = 19860;
   const history = HISTORY;
 
   return (

@@ -1,9 +1,9 @@
-import QuestHistory from '@/components/quest/QuestHistory';
+// import QuestHistory from '@/components/quest/QuestHistory';
 import QuestHistoryZik from '@/components/quest/QuestHistoryZik';
 import React from 'react'
 
 const page = () => {
-  const category = ["MY 그룹"];
+  // const category = ["MY 그룹"];
 
   return (
     <div className='space-y-3.5'>

@@ -1,7 +1,6 @@
 import { quest_badge_special } from '@/assets/images'
 import Image from 'next/image'
 import React from 'react'
-import { Button } from '../ui/button'
 
 const QuestView = () => {
   return (

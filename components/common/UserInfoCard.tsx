@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import { level_badge_01, level_badge_02, level_badge_03, level_badge_04, level_badge_05, man1_avatar } from '@/assets/images'
+import { level_badge_01, level_badge_02, level_badge_03, level_badge_04, level_badge_05 } from '@/assets/images'
 import { Progress } from '../ui/progress'
 import { useAtom } from 'jotai'
 import { avatar, userInfoAtom } from '@/store/atoms'
