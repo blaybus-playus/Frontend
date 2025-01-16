@@ -5,10 +5,11 @@ import React from 'react'
 import { level_badge_01, level_badge_02, level_badge_03, level_badge_04, level_badge_05, man1_avatar } from '@/assets/images'
 import { Progress } from '../ui/progress'
 import { useAtom } from 'jotai'
-import { userInfoAtom } from '@/store/atoms'
+import { avatar, userInfoAtom } from '@/store/atoms'
 
 const UserInfoCard = ({ bar }: { bar: boolean }) => {
   const [userInfo] = useAtom(userInfoAtom);
+  const [myAvatar] = useAtom(avatar);
   const level = userInfo.level.slice(0, 2);
 
   return (
@@ -17,7 +18,7 @@ const UserInfoCard = ({ bar }: { bar: boolean }) => {
         <div className="flex gap-3 items-center">
           <div className="rounded-full ">
             <Image
-              src={man1_avatar}
+              src={myAvatar}
               alt={"유저 사진"}
               width={80}
               height={80}

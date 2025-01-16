@@ -17,16 +17,18 @@ const QuestView = () => {
         <span className='text-gray-500 body-regular-12'>월별 퀘스트</span>
       </div>
       <div className='border-b border-gray-50 mt-3 mb-4'></div>
-      <div className='w-full flex gap-1.5'>
-        <div className='flex items-center justify-center w-7 h-7 body-semibold-12 bg-primary-300 rounded-[6px] text-gray-50'>
-          1주
-        </div>
+      <div className='w-full flex flex-wrap gap-1.5'>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-primary-300 flex-shrink-0'>1월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-primary-300 flex-shrink-0'>2월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-primary-300 flex-shrink-0'>3월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-[#FBD288] flex-shrink-0'>4월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-[#FBD288] flex-shrink-0'>5월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-[#FBD288] flex-shrink-0'>6월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-primary-300 flex-shrink-0'>7월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-primary-300 flex-shrink-0'>8월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-[#FBD288] flex-shrink-0'>9월</div>
+        <div className='flex justify-center items-center w-7 h-7 rounded-md text-white body-semibold-12 bg-primary-300 flex-shrink-0'>10월</div>
       </div>
-      <Button
-        className="mt-8"
-      >
-        전체 퀘스트 보기
-      </Button>
     </div>
   )
 }

@@ -10,7 +10,7 @@ export async function getPosts(token: string) {
 
     if (!res.ok) {
       const errorData = await res.json();
-      throw new Error(errorData.message || '로그인 실패');
+      throw new Error(errorData.message || '게시물 실패');
     }
     const result = await res.json();
     console.log(result)

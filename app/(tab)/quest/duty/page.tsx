@@ -1,4 +1,5 @@
 import QuestHistory from '@/components/quest/QuestHistory';
+import QuestHistoryZik from '@/components/quest/QuestHistoryZik';
 import React from 'react'
 
 const page = () => {
@@ -6,11 +7,12 @@ const page = () => {
 
   return (
     <div className='space-y-3.5'>
-      {category.map((item, index) => (
+      {/* {category.map((item, index) => (
         <>
           <QuestHistory title={item} index={index} />
         </>
-      ))}
+      ))} */}
+      <QuestHistoryZik />
     </div>
   )
 }

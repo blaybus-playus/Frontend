@@ -10,7 +10,6 @@ type EXPInfoKey = keyof typeof EXP_INFO_LIST;
 
 const Page = () => {
   const [activeTab, setActiveTab] = useState<EXPInfoKey>("전체")
-
   return (
     <div className='space-y-3.5'>
       <DateTab activeTab={activeTab} setActiveTab={setActiveTab} />
