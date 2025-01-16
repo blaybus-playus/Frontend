@@ -61,8 +61,8 @@ const UserInfoCard = ({ bar }: { bar: boolean }) => {
 
       </div>
       {bar && <>
-        <Progress className="mt-6" value={75} />
-        <div className="text-right body-regular-14 text-primary-400 mt-1.5">75%</div>
+        <Progress className="mt-6" value={36} />
+        <div className="text-right body-regular-14 text-primary-400 mt-1.5">36%</div>
       </>}
     </div >
   )
