@@ -31,7 +31,7 @@ const ExpDashBoard = ({ type, firstExp, secondExp, recentPercentage }: ExpDashBo
               {dashboard.subtitle}
             </div>
             <div className="flex items-center justify-center gap-2">
-              <span className="text-primary-400 headline-bold-24">{userInfo.level}</span>
+              <span className="text-primary-400 headline-bold-24">{dashboard.subtitle === '올해 레벨' ? 'F1-II' : userInfo.level}</span>
               {/* <HelpCircle className="w-5 h-5 text-primary-300" /> */}
               <LevelDialog />
             </div>

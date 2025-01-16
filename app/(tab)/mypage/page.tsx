@@ -1,9 +1,8 @@
 'use client'
 
-import { man1_avatar } from '@/assets/images'
 import { Button } from '@/components/ui/button'
 import { useAuth } from '@/hooks/useAuth'
-import { userInfoAtom } from '@/store/atoms'
+import { avatar, userInfoAtom } from '@/store/atoms'
 import { useAtom } from 'jotai'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
@@ -13,12 +12,13 @@ const Page = () => {
   const router = useRouter();
   const [userInfo] = useAtom(userInfoAtom);
   const { logout } = useAuth();
+  const [myAvatar] = useAtom(avatar);
 
   return (
     <div className='h-full'>
       <div className='bg-white p-5 rounded-2xl'>
         <Image
-          src={man1_avatar}
+          src={myAvatar}
           alt="avatar"
           width={120}
           height={120}
