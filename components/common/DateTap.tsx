@@ -1,10 +1,12 @@
 'use client'
 
+import { EXP_INFO_LIST } from "@/constant";
 import * as React from "react"
 
+type EXPInfoKey = keyof typeof EXP_INFO_LIST;
 interface TabProps {
   activeTab: string
-  setActiveTab: (tab: string) => void
+  setActiveTab: (tab: EXPInfoKey) => void
 }
 
 export function DateTab({ activeTab, setActiveTab }: TabProps) {
@@ -12,7 +14,7 @@ export function DateTab({ activeTab, setActiveTab }: TabProps) {
   return (
     <div className={"p-1 mx-4 bg-gray-50 rounded-full"}>
       <nav className="flex w-full" role="tablist">
-        {["주", "월", "년", "전체"].map((tab) => (
+        {["2022", "2023", "2024", "전체"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
