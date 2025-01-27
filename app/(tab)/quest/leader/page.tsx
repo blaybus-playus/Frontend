@@ -1,8 +1,8 @@
 // import QuestHistory from '@/components/quest/QuestHistory'
-import QuestHistory2 from '@/components/quest/QuestHistory2';
-import QuestHistory3 from '@/components/quest/QuestHistory3';
-import QuestHistory4 from '@/components/quest/QuestHistory4';
-import QuestHistory5 from '@/components/quest/QuestHistory5';
+import QuestHistory2 from '@/components/quest/Special';
+import QuestHistory3 from '@/components/quest/Improve';
+import QuestHistory4 from '@/components/quest/Personnel';
+import QuestHistory5 from '@/components/quest/Individual';
 import React from 'react'
 
 const page = () => {

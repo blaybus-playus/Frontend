@@ -1,5 +1,5 @@
 // import QuestHistory from '@/components/quest/QuestHistory';
-import QuestHistoryZik from '@/components/quest/QuestHistoryZik';
+import QuestHistoryZik from '@/components/quest/QuestHistoryDuty';
 import React from 'react'
 
 const page = () => {
