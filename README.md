@@ -30,8 +30,6 @@
 | **Communication**          | <img src="https://img.shields.io/badge/slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"> <img src="https://img.shields.io/badge/notion-000000?style=for-the-badge&logo=notion&logoColor=white"> <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=Discord&logoColor=white"> <img src="https://img.shields.io/badge/Figma-111111?style=for-the-badge&logo=Figma&logoColor=white">|
 <div id="c">
  
-# 🖼 <a href="https://www.figma.com/design/FXLbpNjhzatMPVt9i8r6dq/%EB%91%90%ED%95%B8%EC%A6%88-%EB%B8%94%EB%A0%88%EC%9D%B4%EB%B2%84%EC%8A%A4?node-id=326-8438&t=dGTvxbY2mtroYe0T-1">프로토타입</a>
-![프로토타입](https://github.com/user-attachments/assets/cb0e178d-2aaf-4d9e-8036-bb26dbbfb220)
 
 <div id="d">
  
@@ -63,6 +61,8 @@
 ![스크린샷 2025-01-20 104627](https://github.com/user-attachments/assets/f53e8a61-3601-4027-8d5b-33e6ac1d25a6)
 ![스크린샷 2025-01-20 104633](https://github.com/user-attachments/assets/43e53698-e423-40a5-820d-10be0565d5db)
 
+# 🖼 <a href="https://www.figma.com/design/FXLbpNjhzatMPVt9i8r6dq/%EB%91%90%ED%95%B8%EC%A6%88-%EB%B8%94%EB%A0%88%EC%9D%B4%EB%B2%84%EC%8A%A4?node-id=326-8438&t=dGTvxbY2mtroYe0T-1">프로토타입</a>
+![프로토타입](https://github.com/user-attachments/assets/cb0e178d-2aaf-4d9e-8036-bb26dbbfb220)
 
 # 🎨 디자인 시스템
 ![디자인시스템](https://github.com/user-attachments/assets/2532e7d0-774e-41aa-9f22-a2d939fa3028)
