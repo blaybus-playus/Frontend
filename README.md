@@ -1,11 +1,12 @@
 ![image](https://github.com/user-attachments/assets/af382d1b-9a93-4ce9-bc75-162c46c2d2fc)
 # 🏷️ 프로젝트 소개
 📆 개발 기간 25.01.06 ~25.01.15
-### 목적
+### 1. 목적
 두핸즈 구성원들이 직장에서의 성취를 기반으로 일의 즐거움을 느끼고 동기부여를 받을 수 있도록 사내 성과를 가시화하여 보여줄 수 있는 게이미피케이션 앱 서비스 개발 공모전
 
-<a href="https://docs.google.com/spreadsheets/d/1fmj8hGoFp0W4FXXeIdDolBI3wyMdokePa0PUnP3f9SY/edit?gid=0#gid=0">요구사항 명세서</a>
-### 주요기능
+### <a href="https://docs.google.com/spreadsheets/d/1fmj8hGoFp0W4FXXeIdDolBI3wyMdokePa0PUnP3f9SY/edit?gid=0#gid=0">2. 요구사항 명세서 (Google Spreadsheets)</a>
+
+### 3. 주요기능
 - 어드민 : 어드민 계정으로 로그인하여 어드민 페이지 접속(계정 생성 ,계정관리,게시글 관리, 게시글 작성)
 - 로그인 : 어드민에서 부여한 ID/PW로 로그인
 - 구성원 정보 : 본인 정보(사번, 소속, 성함, 캐릭터, 입사일, 레벨)확인 , 비밀번호 변경기능, 캐릭터 변경기능
