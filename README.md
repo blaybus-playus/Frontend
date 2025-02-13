@@ -32,8 +32,7 @@
 # 🖇️ 팀 구성
 | 류승범(Back-End)                          | 김원기(Back-End)                         | 김진우(Front-End)                         |
 |-------------------------------|------------------------------|-------------------------------|
-| [![류승범](https://github.com/W-llama.png)](https://github.com/W-llama) | [![김원기](https://github.com/WonGi-Kim.png)](https://github.com/WonGi-Kim) | ![김진우](https://github.com/user-attachments/assets/87eb36f2-e8a6-4b22-b081-2876ee9cc317)
-|
+| [![류승범](https://github.com/W-llama.png)](https://github.com/W-llama) | ![image](https://github.com/user-attachments/assets/a11a7be8-3ddd-4ad7-8149-cbff3fe5f151) | ![김진우](https://github.com/user-attachments/assets/87eb36f2-e8a6-4b22-b081-2876ee9cc317) |
 
 <div id="e">
   
