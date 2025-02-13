@@ -67,6 +67,28 @@
 # 🎨 디자인 시스템
 ![디자인시스템](https://github.com/user-attachments/assets/2532e7d0-774e-41aa-9f22-a2d939fa3028)
 
+# 💻 필수 API KEY
+Google Sheets 접근을 위한 API 키 파일`(google.json)`이 필요합니다.
+
+파일 위치: `resources/googleSheet/`
+
+<div id="i">
+
+# 🔑 환경 변수
+```
+MYSQL_ENDPOINT= {your_mysql_url}
+MYSQL_PORT = {your_Mysql_port}
+MYSQL_DBNAME= {your_database_name}
+MYSQL_USERNAME= {your_database_username}
+MYSQL_PASSWORD= {your_database_password}
+JWT_SECRET_KEY= {your_key}
+JWT_ACCESS_EXPIRE_TIME= 3600000
+JWT_REFRESH_EXPIRE_TIME= 1209600000
+MONGODB_URI= {your_mongodb_uri}
+GOOGLE_SHEET_ID={your_google_sheet_id}
+```
+---
+
 # 🎤 Source 
 - <a href="https://www.figma.com/slides/OnzEGzNZZOlitD5TymFdS5/%EB%B0%9C%ED%91%9CPPT?node-id=29-833&t=as7h3lccrpbrt0iV-1">Presentation File</a>
 - <a href="https://www.notion.so/Play-Us-169691816978805794b2db9ab8979f04?pvs=4">Notion</a>
