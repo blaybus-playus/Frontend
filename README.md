@@ -34,9 +34,10 @@
 <div id="d">
  
 # 🖇️ 팀 구성
-| 류승범(Back-End)                          | 김원기(Back-End)                         | 김진우(Front-End)                         |
-|-------------------------------|------------------------------|-------------------------------|
-| [![류승범](https://github.com/W-llama.png)](https://github.com/W-llama) | ![image](https://github.com/user-attachments/assets/a11a7be8-3ddd-4ad7-8149-cbff3fe5f151) | ![김진우](https://github.com/user-attachments/assets/87eb36f2-e8a6-4b22-b081-2876ee9cc317) |
+| 정태화(PM) | 김진우(FE) | 류승범(BE) | 김원기(BE) | 박상하(DE) | 신재호(DE) |
+|------------|------------------|-----------------|-----------------|------------|------------|
+| ![정태화](https://github.com/user-attachments/assets/10909e05-77a5-49ce-b7d1-94f264ab56fb) | ![김진우](https://github.com/user-attachments/assets/bb7f26bc-e1b3-4647-a47b-b9c4ef52040b) | ![류승범](https://github.com/user-attachments/assets/5d9c5c8a-fbf3-4289-a136-0e18cc52d8ad) | ![김원기](https://github.com/user-attachments/assets/647a8674-880d-48b8-9cd9-b4d9b750e48f) | ![박상하](https://github.com/user-attachments/assets/6239ba19-8f5d-48da-b1c0-95c19bffcd3d) | ![신재호](https://github.com/user-attachments/assets/4a1986ef-9799-4286-8ed3-742db3076866) |
+
 
 <div id="e">
   
