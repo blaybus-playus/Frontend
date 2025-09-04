@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/af382d1b-9a93-4ce9-bc75-162c46c2d2fc)
 # 🏷️ 프로젝트 소개
 📆 개발 기간 25.01.06 ~25.01.15
 ### 1. 목적
@@ -45,7 +44,51 @@
 
 ![image](https://github.com/user-attachments/assets/956279cd-5044-495c-af05-480de811d759)
 
+<div id="feature-screens">
 
+# 📱 기능 소개
+
+<p align="center">
+  <img width="720" height="405" alt="슬라이드5" src="https://github.com/user-attachments/assets/a5a6f1c2-57d1-4e73-9c1a-a3a3b2c3e77e" />
+</p>
+<p align="center">
+ <img width="720" height="405" alt="슬라이드6" src="https://github.com/user-attachments/assets/fcc6d336-195f-4a19-a210-24f6f7de202b" />
+<p align="center">
+ <img width="720" height="405" alt="슬라이드7" src="https://github.com/user-attachments/assets/a91a2e18-cac7-47fb-bea3-768b4bc48f9b" />
+ </p>
+<p align="center">
+<img width="720" height="405" alt="슬라이드8" src="https://github.com/user-attachments/assets/8fd77ed0-844b-40c5-b587-fa1a7354d6b4" />
+ </p>
+ <p align="center">
+<img width="720" height="405" alt="슬라이드9" src="https://github.com/user-attachments/assets/ec88d3a5-9184-429f-9139-8ff0bcc0b640" />
+  </p>
+  <p align="center">
+<img width="720" height="405" alt="슬라이드10" src="https://github.com/user-attachments/assets/aaa8c8ee-6754-4233-ade4-ae850d395c94" />
+   </p>
+   <p align="center">
+<img width="720" height="405" alt="슬라이드11" src="https://github.com/user-attachments/assets/f1af8e19-3b9e-4c4e-a3c0-cd5d079dc04d" />
+    </p>
+    <p align="center">
+<img width="720" height="405" alt="슬라이드12" src="https://github.com/user-attachments/assets/7a8ca9ee-3f93-4665-be66-bdebb38ac5e7" />
+     </p>
+     <p align="center">
+<img width="720" height="405" alt="슬라이드13" src="https://github.com/user-attachments/assets/1dbbe450-112c-4389-b638-566545dcdf04" />
+      </p>
+      <p align="center">
+<img width="720" height="405" alt="슬라이드14" src="https://github.com/user-attachments/assets/30060d1f-bf6a-4237-baf9-bdb4dd4a06d1" />
+       </p>
+       <p align="center">
+<img width="720" height="405" alt="슬라이드15" src="https://github.com/user-attachments/assets/64ead097-e47f-4329-a04e-c3d4988f5f48" />
+        </p>
+        <p align="center">
+<img width="720" height="405" alt="슬라이드16" src="https://github.com/user-attachments/assets/3bac6d13-c22f-46ed-a929-cc5f053f85d8" />
+         </p>
+         <p align="center">
+<img width="720" height="405" alt="슬라이드17" src="https://github.com/user-attachments/assets/be80c78f-208b-454e-8d0d-0cca8fd5000b" />
+          </p>
+          <p align="center">
+<img width="720" height="405" alt="슬라이드18" src="https://github.com/user-attachments/assets/635861a8-de5c-4253-ad95-65c27c287778" />
+</p>
 
 <div id="f">
 
@@ -62,7 +105,7 @@
 ![스크린샷 2025-01-20 104627](https://github.com/user-attachments/assets/f53e8a61-3601-4027-8d5b-33e6ac1d25a6)
 ![스크린샷 2025-01-20 104633](https://github.com/user-attachments/assets/43e53698-e423-40a5-820d-10be0565d5db)
 
-# 🖼 <a href="https://www.figma.com/design/FXLbpNjhzatMPVt9i8r6dq/%EB%91%90%ED%95%B8%EC%A6%88-%EB%B8%94%EB%A0%88%EC%9D%B4%EB%B2%84%EC%8A%A4?node-id=326-8438&t=dGTvxbY2mtroYe0T-1">프로토타입</a>
+# 🖼 <a href="https://www.figma.com/design/FXLbpNjhzatMPVt9i8r6dq/%EB%91%90%ED%95%B8%EC%A6%88-%EB%B8%94%EB%A0%88%EC%9D%B4%EB%B2%84%EC%8A%A4?node-id=326-8438&t=dGTvxbY2mtroYe0T-1">화면설계서</a>
 ![프로토타입](https://github.com/user-attachments/assets/cb0e178d-2aaf-4d9e-8036-bb26dbbfb220)
 
 # 🎨 디자인 시스템
